@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    background-color: #1c1c1c;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    /* text-align: center; */
+    background-color: #b2b2b2;
+    border-radius: 5px;
+
+}
+
+.col {
+    background-color: #1c1c1c;
+    /* background-image: linear-gradient(0deg, #1c1c1c, #1c1c1c, rgba(255, 255, 255, 0.174)); */
+    flex: 49.4%;
+    max-width: 49.4%;
+    color: white;
+    margin: 0.3%;
+    line-height: 220%;
+    padding: 0.2%;
+
+}
+
+.col:not(:nth-child(1)):not(:nth-child(2)) {
+    margin-top: 0;
+}
+
+.col div {
+    display: inline-block;
+
+}
+
+.right {
+    float: right;
+}
+
+.p-change {
+    position: relative;
+    width: 8em;
+    border-radius: 5px;
+}
+
+.p-change div {
+    background-color: #ff767600;
+}
+
+.red-background {
+    background-color: rgb(255, 42, 42);
+    background-image: linear-gradient(0deg, rgb(190, 0, 0), red, rgb(190, 0, 0));
+}
+
+.green-background {
+    background-color: rgb(0, 255, 110);
+    background-image: linear-gradient(0deg, green, rgb(0, 190, 70), green);
+}
+
+.red {
+    color: red
+}
+
+.green {
+    color: rgb(0, 255, 110);
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    border-bottom: 1em solid rgb(255, 255, 255);
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-top: 1em solid #ffffff;
+}
+
+.right-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+}
+
+.right-container div {
+    display: block;
+    font-size: small;
+    height: 10px;
+    padding-right: 5px;
+    font-size: 100%;
+    /* font-weight: bold; */
+}
+
+.change-amount {
+    text-align: right;
+    line-height: 30px;
+}
+
+.change-amount-percentage {
+    text-align: right;
+}
+
+.p-amount {
+    min-width: 80px;
+
+}
+
+.p-price {
+    min-width: 80px;
+}
+
+
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+    * {
+        font-size: .96em;
+    }
+
+    .row {
+        flex-direction: column;
+
+    }
+
+    .col {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .col:not(:first-child) {
+        margin-top: 0;
+
+    }
+
+    .p-amount {
+        min-width: 40px;
+
+    }
+
+    .p-price {
+        min-width: 40px;
+    }
+
+    .p-change {
+        width: 6em;
+    }
+}

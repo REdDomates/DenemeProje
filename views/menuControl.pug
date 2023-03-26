@@ -1,0 +1,27 @@
+extends layouts/layout.pug
+
+
+block content
+
+    .container.m-5
+        form(action="/menucontrol" method="POST")
+            #productInputs
+                .row.mb-3
+                    .col-sm-6
+                        label.form-label Ürün Adı
+                    .col-sm
+                        label.form-label Fiyatı
+                    .col-sm
+                        label.form-label Eski Fiyat
+                    .col-sm
+                        label.form-label Miktarı
+                    .col-sm
+                        label.form-label
+            .row
+                .col
+                    button.btn.btn-warning.btn-add(type="button") Yeni Ürün Ekle
+                    button.btn.btn-success.btn-add(type="submit") Guncelle
+    script(src="js/script.js")
+    script.
+        getMenu(addMenuInputValue);
+        addAddButtonEvent();
